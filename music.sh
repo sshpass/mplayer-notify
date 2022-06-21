@@ -20,6 +20,10 @@ type -P ffmpeg 1>/dev/null
 
 type -P mp3info 1>/dev/null
           [ "$?" -ne 0 ] && echo "Please install mp3info before using this script." && exit
+	  
+	  
+type -P mplayer 1>/dev/null
+          [ "$?" -ne 0 ] && echo "Please install mplayer before using this script." && exit
 
 if [ ! -e /tmp/fifo ]; then
           mkfifo /tmp/fifo
